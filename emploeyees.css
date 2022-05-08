@@ -1,0 +1,48 @@
+body {
+  background-image: url("desk_background.jpg");
+}
+
+.board {
+  padding-left: 1em;
+  padding-bottom: 3em;
+}
+
+h1, h2 {
+  color: white;
+}
+
+button {
+  font-weight: bolder;
+  font-family: "Courier New", Courier, monospace;
+}
+
+input {
+  font-family: "Courier New", Courier, monospace;
+  font-size: small;
+  width: 190px;
+}
+
+#employeeslist {
+  color: white;
+  overflow-y: auto;
+  border: 1px solid white;
+  height: 100px;
+  width: 61%;
+  padding: 1em;
+}
+
+#employeebyID {
+  color: white;
+  border: 1px solid white;
+  height: 30px;
+  width: 61%;
+  padding: 1em;
+}
+
+#errorMsgEmployeeByID, #errorMsgDeleteEmployee, #errorMsgNewEmployee, #errorMsgNewEmployee2{
+  color:crimson;
+}
+
+#findEmforDelete {
+  width: 230px;
+}

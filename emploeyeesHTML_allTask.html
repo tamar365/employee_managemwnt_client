@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    <link rel="stylesheet" type="text/css" href="emploeyees.css">
+    <script src="employees_allTask.js" defer></script>
+</head>
+
+<body>
+    <div class="board">
+        <h1>EMPLOYEES LIST</h1>
+        <p id="employeeslist"></p>
+        <button id="btn" onclick="getAllEmployees()">GET ALL EMPLOYEES</button>
+        <br>
+        <br>
+        <br>
+        <h2>FIND EMPLOEE BY HIS ID</h2>
+        <input type="text" id="findemployee" placeholder="Enter ID" pattern="[0-9]{9}" maxlength="9"
+            title="Please enter exactly 9 digits" />
+        <button id="btn1" onclick="input1()">SUBMIT</button>
+        <p id="employeebyID"></p>
+        <span id="errorMsgEmployeeByID"></span>
+        <br>
+        <br>
+        <br>
+        <h2>SAVE A NEW EMPLOYEE IN THE SYSTEM AND SHOW THE NEW LIST</h2>
+        <input type="text" id="employeefName" placeholder="Enter first name" />
+        <input type="text" id="employeelName" placeholder="Enter last name" />
+        <input type="text" id="employeeID" placeholder="Enter ID of the employee" />
+        <input type="text" id="employeeCity" placeholder="Enter city of employee" />
+        <button id="btn2" onclick="input2()">SUBMIT</button>
+        <br>
+        <br>
+        <span id="errorMsgNewEmployee"></span>
+        <span id="errorMsgNewEmployee2"></span>
+        <br>
+        <br>
+        <h2>UPDATE EMPLOEE DATA AND SHOW THE UPDATE LIST</h2>
+        <input type="text" id="updatefName" placeholder="Enter first name" />
+        <input type="text" id="updatelName" placeholder="Enter last name " />
+        <input type="text" id="updateCity" placeholder="Update city of residence" />
+        <input type="text" id="idEmployee" placeholder="Enter ID of the employee" />
+        <button id="btn3" onclick="input3()">SUBMIT</button>
+        <br>
+        <br>
+        <br>
+        <h2>DELETE EMPLOEE FROM THE LIST AND SHOW THE UPDATE LIST</h2>
+        <input type="text" id="findEmforDelete" placeholder="Enter ID for delete employee" />
+        <button id="btn4" onclick="input4()">SUBMIT</button>
+        <br>
+        <br>
+        <span id="errorMsgDeleteEmployee"></span>
+    </div>
+</body>
+
+</html>
