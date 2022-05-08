@@ -94,8 +94,8 @@ function input3() {
   let lnameEm = document.getElementById("updatelName").value;
   idEm = document.getElementById("idEmployee").value;
   let changeCity = document.getElementById("updateCity").value;
-  let errMsg = document.getElementById("errorMsgUpdateEmployee")
-  let errMsg2 = document.getElementById("errorMsgUpdateEmployee2")
+  let errMsg = document.getElementById("errorMsgUpdateEmployee");
+  let errMsg2 = document.getElementById("errorMsgUpdateEmployee2");
   errMsg.innerHTML = "";
   errMsg2.innerHTML = "";
   if (fnameEm == "" || lnameEm == "" || idEm == "" || changeCity == "") {
@@ -142,5 +142,9 @@ function getEmByID3(idEmployee1) {
     .then((res) => res.json())
     .then((data) => {
       print1(data);
+      let result = data.filter((data) => data.id == Number(idEmployee1));
+      if (result.length == 0) {
+        alert("An employee has been successfully deleted from the system.");
+      }
     });
 }
