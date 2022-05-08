@@ -39,7 +39,7 @@ input {
   padding: 1em;
 }
 
-#errorMsgEmployeeByID, #errorMsgDeleteEmployee, #errorMsgNewEmployee, #errorMsgNewEmployee2{
+#errorMsgEmployeeByID, #errorMsgDeleteEmployee, #errorMsgNewEmployee, #errorMsgNewEmployee2, #errorMsgUpdateEmployee, #errorMsgUpdateEmployee2{
   color:crimson;
 }
 

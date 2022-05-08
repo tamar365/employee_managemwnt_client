@@ -40,9 +40,14 @@ function getEmByID(idEmployee) {
 function print2(data) {
   console.log(data);
   document.getElementById("employeebyID").innerHTML = "";
-  document.getElementById(
-    "employeebyID"
-  ).innerHTML = `fname: ${data[0].fname}, lname: ${data[0].lname}, id: ${data[0].id}, city: ${data[0].city}`;
+  let errorMsg = document.getElementById("errorMsgEmployeeByID");
+  if (data.length == 0) {
+    errorMsg.innerHTML = "This employee does not exist in the system.";
+  } else {
+    document.getElementById(
+      "employeebyID"
+    ).innerHTML = `fname: ${data[0].fname}, lname: ${data[0].lname}, id: ${data[0].id}, city: ${data[0].city}`;
+  }
 }
 
 function input2() {
@@ -89,13 +94,24 @@ function input3() {
   let lnameEm = document.getElementById("updatelName").value;
   idEm = document.getElementById("idEmployee").value;
   let changeCity = document.getElementById("updateCity").value;
-  let change = {
-    fname: fnameEm,
-    lname: lnameEm,
-    id: idEm,
-    city: changeCity,
-  };
-  getEmByID2(change);
+  let errMsg = document.getElementById("errorMsgUpdateEmployee")
+  let errMsg2 = document.getElementById("errorMsgUpdateEmployee2")
+  errMsg.innerHTML = "";
+  errMsg2.innerHTML = "";
+  if (fnameEm == "" || lnameEm == "" || idEm == "" || changeCity == "") {
+    errMsg.innerHTML = "Please fill in all the fields. <br>";
+  }
+  if (idEm.length != 9 || idEm == "") {
+    errMsg2.innerHTML = "Please enter 9-digit ID.";
+  } else {
+    let change = {
+      fname: fnameEm,
+      lname: lnameEm,
+      id: idEm,
+      city: changeCity,
+    };
+    getEmByID2(change);
+  }
 }
 
 function getEmByID2(change) {
